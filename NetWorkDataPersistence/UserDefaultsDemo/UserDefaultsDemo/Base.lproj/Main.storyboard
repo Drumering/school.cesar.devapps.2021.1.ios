@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaultsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Default Sample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRZ-FI-27o">
+                                <rect key="frame" x="128.5" y="437.5" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iq-ar-MSC">
+                                <rect key="frame" x="142.5" y="474.5" width="129" height="30"/>
+                                <state key="normal" title="Recuperando valor"/>
+                                <connections>
+                                    <action selector="btnRecuperarValor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zB9-BB-WmL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1L-ab-uId">
+                                <rect key="frame" x="144" y="520.5" width="126" height="30"/>
+                                <state key="normal" title="Removendo chave"/>
+                                <connections>
+                                    <action selector="btnRemoverValor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tFL-3H-2rG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F1L-ab-uId" firstAttribute="top" secondItem="5iq-ar-MSC" secondAttribute="bottom" constant="16" id="5LP-vy-9iq"/>
+                            <constraint firstItem="KRZ-FI-27o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KVo-Xm-VJb"/>
+                            <constraint firstItem="F1L-ab-uId" firstAttribute="centerX" secondItem="KRZ-FI-27o" secondAttribute="centerX" id="bWB-JP-i6K"/>
+                            <constraint firstItem="5iq-ar-MSC" firstAttribute="top" secondItem="KRZ-FI-27o" secondAttribute="bottom" constant="16" id="cZJ-QV-X07"/>
+                            <constraint firstItem="KRZ-FI-27o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jh9-0r-4cL"/>
+                            <constraint firstItem="5iq-ar-MSC" firstAttribute="centerX" secondItem="KRZ-FI-27o" secondAttribute="centerX" id="tge-AA-Lcb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbexample" destination="KRZ-FI-27o" id="x2V-kE-Q6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
