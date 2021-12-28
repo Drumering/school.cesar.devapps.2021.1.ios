@@ -73,16 +73,16 @@ class CarsTableViewController: UITableViewController {
             
             switch error {
             case .invalidJSON:
-                response = "invalidJSON"
+                response = "Error ao decodificar objeto json. Por favor verifique"
             case .noData:
                 response = "noData"
             case .noResponse:
                 response = "noResponse"
-            case .url:
+            case .urlError:
                 response = "JSON inválido"
             case .taskError(let error):
                 response = "\(error?.localizedDescription ?? "Generic Error")"
-            case .responseStatusCode(let code):
+            case .responseStatusCodeError(let code):
                 if code != 200 {
                     response = "Algum problema com o servidor. :( \nError:\(code)"
                 }
@@ -138,11 +138,31 @@ class CarsTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             REST.delete(car: cars[indexPath.row]) { onComplete in
-                if onComplete {
+                switch onComplete {
+                case .success(let message):
+                    print(message)
                     self.cars.remove(at: indexPath.row)
                     DispatchQueue.main.async {
                         tableView.deleteRows(at: [indexPath], with: .fade)
                     }
+                }
+            } onError: { error in
+                let title = "Error"
+                var message = ""
+                switch error {
+                case .urlError, .noData, .invalidJSON:
+                    message = "Error Inesperado. Verifique sua conexao. Caso persista, entre em contato com o desenvolvedor"
+                case .responseStatusCodeError(let code):
+                    message = "Erro ao contato com servidor. Por favor, avise o desenvolvedor informando o codigo: \(code)"
+                case .taskError(let error):
+                    message = "Erro ao executar a solicitacao. Por favor tente novamente ou avise o desenvolvedor informando o error: \(error!)"
+                default:
+                    message = "Error inesperado, por favor avise o desenvolvedor"
+                }
+                
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }

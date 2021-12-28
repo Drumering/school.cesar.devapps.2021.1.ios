@@ -86,10 +86,10 @@ class AddEditViewController: UIViewController {
         
         REST.loadBrands { (brands) in
             
-            guard let brands = brands else {
-                self.showAlert(withTitle: "Marcas de carros", withMessage: "Ocorreu um erro ao tentar obter as marcas de carros da tabela FIPE", isTryAgain: true, operation: .get_brands)
-                return
-            }
+//            guard let brands = brands else {
+//                self.showAlert(withTitle: "Marcas de carros", withMessage: "Ocorreu um erro ao tentar obter as marcas de carros da tabela FIPE", isTryAgain: true, operation: .get_brands)
+//                return
+//            }
             
             // ascending order
             self.brands = brands.sorted(by: {$0.nome < $1.nome})
@@ -99,6 +99,25 @@ class AddEditViewController: UIViewController {
                 self.pickerView.reloadAllComponents()
             }
             
+        } onError: { error in
+            
+            let title = "Error"
+            var message = ""
+            switch error {
+            case .urlError, .noData, .invalidJSON:
+                message = "Error Inesperado ao carregar as marcas. Verifique sua conexao. Caso persista, entre em contato com o desenvolvedor"
+            case .responseStatusCodeError(let code):
+                message = "Erro ao contato com servidor ao carregar as marcas. Por favor, avise o desenvolvedor informando o codigo: \(code)"
+            case .taskError(let error):
+                message = "Erro ao executar a solicitacao ao carregar as marcas. Por favor tente novamente ou avise o desenvolvedor informando o error: \(error!)"
+            default:
+                message = "Error inesperado ao carregar as marcas, por favor avise o desenvolvedor"
+            }
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            DispatchQueue.main.async {
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -139,11 +158,21 @@ class AddEditViewController: UIViewController {
         // new car
         startLoadingAnimation()
         REST.save(car: car) { onComplete in
-            if onComplete {
+            switch onComplete {
+            case .success(let message):
+                print(message)
                 self.goBack()
-            } else {
-                print("Deu erro no save. Adicionar alerta")
-                self.showAlert(withTitle: "Salvar", withMessage: "Ocorreu um erro ao tentar salvar", isTryAgain: true, operation: .add_car)
+            }
+        } onError: { error in
+            switch error {
+            case .urlError, .invalidJSON:
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro inesperado ao salvar. Avise o desenvolvedor", isTryAgain: true, operation: .add_car)
+            case .responseStatusCodeError(let code):
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro no servidor ao salvar, tente novamente mais tarde. Error: \(code)", isTryAgain: true, operation: .add_car)
+            case .taskError(let error):
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro inesperado ao salvar. Avise o desenvolvedor. Erro: \(error!)", isTryAgain: true, operation: .add_car)
+            default:
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro inesperado ao salvar. Avise o desenvolvedor", isTryAgain: true, operation: .add_car)
             }
         }
     }
@@ -151,11 +180,21 @@ class AddEditViewController: UIViewController {
     func editar() {
         startLoadingAnimation()
         REST.update(car: car) { onComplete in
-            if onComplete {
+            switch onComplete {
+            case .success(let message):
+                print(message)
                 self.goBack()
-            } else {
-                print("Deu erro no update. Adicionar alerta")
-                self.showAlert(withTitle: "Editar", withMessage: "Ocorreu um erro ao tentar editar", isTryAgain: true, operation: .edit_car)
+            }
+        } onError: { error in
+            switch error {
+            case .urlError, .invalidJSON:
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro inesperado ao editar. Avise o desenvolvedor", isTryAgain: true, operation: .edit_car)
+            case .responseStatusCodeError(let code):
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro no servidor ao editar, tente novamente mais tarde. Error: \(code)", isTryAgain: true, operation: .edit_car)
+            case .taskError(let error):
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro inesperadoao editar . Avise o desenvolvedor. Erro: \(error!)", isTryAgain: true, operation: .edit_car)
+            default:
+                self.showAlert(withTitle: "Error", withMessage: "Ocorreu um erro inesperado ao editar. Avise o desenvolvedor", isTryAgain: true, operation: .edit_car)
             }
         }
     }
