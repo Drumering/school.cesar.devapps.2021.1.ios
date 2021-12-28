@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum CarError {
     case url
@@ -47,14 +48,16 @@ class REST {
             return
         }
         
-        session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error == nil {
-                guard let response = response as? HTTPURLResponse else {
+        AF.request(url).response { result in
+            
+            if result.error == nil {
+                guard let response = result.response else {
                     onError(.noResponse)
                     return
                 }
+                
                 if response.statusCode == 200 {
-                    guard let data = data else {
+                    guard let data = result.data else {
                         onError(.noData)
                         return
                     }
@@ -71,10 +74,39 @@ class REST {
                     onError(.responseStatusCode(code: response.statusCode))
                 }
             } else {
-                print(error.debugDescription)
-                onError(.taskError(error: error))
+                print(result.error.debugDescription)
+                onError(.taskError(error: result.error))
             }
-        }.resume()
+        }
+        
+//        session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+//            if error == nil {
+//                guard let response = response as? HTTPURLResponse else {
+//                    onError(.noResponse)
+//                    return
+//                }
+//                if response.statusCode == 200 {
+//                    guard let data = data else {
+//                        onError(.noData)
+//                        return
+//                    }
+//
+//                    do {
+//                        let cars = try JSONDecoder().decode([Car].self, from: data)
+//                        onComplete(cars)
+//                    } catch {
+//                        print(error.localizedDescription)
+//                        onError(.invalidJSON)
+//                    }
+//                } else {
+//                    print("Algum status inválido(-> \(response.statusCode) <-) pelo servidor!! ")
+//                    onError(.responseStatusCode(code: response.statusCode))
+//                }
+//            } else {
+//                print(error.debugDescription)
+//                onError(.taskError(error: error))
+//            }
+//        }.resume()
         
     }
     
@@ -84,16 +116,16 @@ class REST {
             onComplete(nil)
             return
         }
-        // tarefa criada, mas nao processada
-        let dataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error == nil {
-                guard let response = response as? HTTPURLResponse else {
+        
+        AF.request(url).response { result in
+            if result.error == nil {
+                guard let response = result.response else {
                     onComplete(nil)
                     return
                 }
                 if response.statusCode == 200 {
                     // obter o valor de data
-                    guard let data = data else {
+                    guard let data = result.data else {
                         onComplete(nil)
                         return
                     }
@@ -111,8 +143,36 @@ class REST {
                 onComplete(nil)
             }
         }
-        // start request
-        dataTask.resume()
+        
+        // tarefa criada, mas nao processada
+//        let dataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+//            if error == nil {
+//                guard let response = response as? HTTPURLResponse else {
+//                    onComplete(nil)
+//                    return
+//                }
+//                if response.statusCode == 200 {
+//                    // obter o valor de data
+//                    guard let data = data else {
+//                        onComplete(nil)
+//                        return
+//                    }
+//                    do {
+//                        let brands = try JSONDecoder().decode([Brand].self, from: data)
+//                        onComplete(brands)
+//                    } catch {
+//                        // algum erro ocorreu com os dados
+//                        onComplete(nil)
+//                    }
+//                } else {
+//                    onComplete(nil)
+//                }
+//            } else {
+//                onComplete(nil)
+//            }
+//        }
+//        // start request
+//        dataTask.resume()
     }
     
     static func save (car: Car, onComplete: @escaping (Bool) -> Void) {
@@ -153,10 +213,11 @@ class REST {
         }
         
         request.httpBody = json
+        request.allHTTPHeaderFields = ["Content-Type":"application/json"]
         
-        session.dataTask(with: request) { (data: Data?, response: URLResponse?, erro: Error?) in
-            if erro == nil {
-                guard let response = response as? HTTPURLResponse, response.statusCode == 200, let _ = data else {
+        AF.request(request).response { result in
+            if result.error == nil {
+                guard let response = result.response, response.statusCode == 200 else {
                     onComplete(false)
                     return
                 }
@@ -164,6 +225,18 @@ class REST {
             } else {
                 onComplete(false)
             }
-        }.resume()
+        }
+        
+//        session.dataTask(with: request) { (data: Data?, response: URLResponse?, erro: Error?) in
+//            if erro == nil {
+//                guard let response = response as? HTTPURLResponse, response.statusCode == 200, let _ = data else {
+//                    onComplete(false)
+//                    return
+//                }
+//                onComplete(true)
+//            } else {
+//                onComplete(false)
+//            }
+//        }.resume()
     }
 }
