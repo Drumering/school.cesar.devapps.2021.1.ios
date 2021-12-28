@@ -10,6 +10,7 @@
 		71334C88276D4A4F004153F0 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71334C87276D4A4F004153F0 /* Car.swift */; };
 		71334C8E276D4A9F004153F0 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71334C8D276D4A9F004153F0 /* REST.swift */; };
 		71334C9A276E12C1004153F0 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71334C99276E12C1004153F0 /* Brand.swift */; };
+		71DD0823277B4F1B00AA472D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD0822277B4F1B00AA472D /* AboutViewController.swift */; };
 		96124170877AB9160DCFFB0F /* Pods_Carangas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D485F7FE018FFED318050F /* Pods_Carangas.framework */; };
 		A1B18D051F9C1BDD00313110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B18D041F9C1BDD00313110 /* AppDelegate.swift */; };
 		A1B18D0A1F9C1BDD00313110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B18D081F9C1BDD00313110 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		71334C87276D4A4F004153F0 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		71334C8D276D4A9F004153F0 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		71334C99276E12C1004153F0 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		71DD0822277B4F1B00AA472D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A1B18D011F9C1BDD00313110 /* Carangas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carangas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B18D041F9C1BDD00313110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B18D091F9C1BDD00313110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				A1B18D181F9C1DBA00313110 /* AddEditViewController.swift */,
 				A1B18D1A1F9C1DCF00313110 /* CarViewController.swift */,
 				71334C8D276D4A9F004153F0 /* REST.swift */,
+				71DD0822277B4F1B00AA472D /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,7 +127,6 @@
 				487CE68DD683A9AF39A08B2E /* Pods-Carangas.debug.xcconfig */,
 				FC7B2B2AD4C8D08F6DB615AE /* Pods-Carangas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,10 +208,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Carangas/Pods-Carangas-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -251,6 +255,7 @@
 				71334C88276D4A4F004153F0 /* Car.swift in Sources */,
 				71334C9A276E12C1004153F0 /* Brand.swift in Sources */,
 				A1B18D191F9C1DBA00313110 /* AddEditViewController.swift in Sources */,
+				71DD0823277B4F1B00AA472D /* AboutViewController.swift in Sources */,
 				A1B18D1B1F9C1DCF00313110 /* CarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
