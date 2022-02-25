@@ -42,7 +42,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="KdR-7M-4CW">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="833"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CG-aF-THH">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CG-aF-THH" customClass="ItemView" customModule="nubankmock" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-Pg-i7M">
@@ -59,7 +59,7 @@
                                                     <constraint firstItem="oxb-Pg-i7M" firstAttribute="centerY" secondItem="4CG-aF-THH" secondAttribute="centerY" id="e2G-GV-8mp"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxA-Cz-c09">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxA-Cz-c09" customClass="ItemView" customModule="nubankmock" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="141" width="359" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-rB-Qr6">
@@ -76,7 +76,7 @@
                                                     <constraint firstAttribute="height" constant="128" id="ybk-X5-tL3"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-7u-aXt">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-7u-aXt" customClass="ItemView" customModule="nubankmock" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="282" width="359" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Au-MN-few">
@@ -93,7 +93,7 @@
                                                     <constraint firstItem="6Au-MN-few" firstAttribute="centerX" secondItem="aOv-7u-aXt" secondAttribute="centerX" id="yzj-0O-E2Q"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MM-aG-oxE">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MM-aG-oxE" customClass="ItemView" customModule="nubankmock" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="423" width="359" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPN-OR-s9X">
@@ -110,7 +110,7 @@
                                                     <constraint firstItem="ZPN-OR-s9X" firstAttribute="centerX" secondItem="6MM-aG-oxE" secondAttribute="centerX" id="oRb-oY-g2p"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKa-aK-Clz">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKa-aK-Clz" customClass="ItemView" customModule="nubankmock" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="564" width="359" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zey-D7-TJq">
@@ -127,7 +127,7 @@
                                                     <constraint firstItem="Zey-D7-TJq" firstAttribute="centerX" secondItem="XKa-aK-Clz" secondAttribute="centerX" id="fyh-QB-vlE"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RW-Fl-Cbf">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RW-Fl-Cbf" customClass="ItemView" customModule="nubankmock" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="705" width="359" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkA-ju-byz">
@@ -299,15 +299,56 @@
                             <constraint firstItem="QDB-hg-o8l" firstAttribute="centerY" secondItem="PUO-LF-P9P" secondAttribute="centerY" id="qq3-eS-TZ4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fifthOption" destination="XKa-aK-Clz" id="1N4-fl-z4A"/>
+                        <outlet property="firstOption" destination="4CG-aF-THH" id="Jov-ub-NLC"/>
+                        <outlet property="fourthOption" destination="6MM-aG-oxE" id="9s1-w5-f7A"/>
+                        <outlet property="secondOption" destination="ZxA-Cz-c09" id="IHc-4j-FfT"/>
+                        <outlet property="sixthOption" destination="8RW-Fl-Cbf" id="sE0-Le-vYZ"/>
+                        <outlet property="thirdOption" destination="aOv-7u-aXt" id="0JE-rC-XZA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="63.418290854572717"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="jgX-H4-5gy">
+            <objects>
+                <viewController storyboardIdentifier="SegundaTela" id="wDW-mJ-coc" customClass="DetailViewController" customModule="nubankmock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grn-aL-1rQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CH-IS-KIQ">
+                                <rect key="frame" x="159" y="319" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zck-oh-elo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4CH-IS-KIQ" firstAttribute="centerX" secondItem="Zck-oh-elo" secondAttribute="centerX" id="cLo-mY-1S3"/>
+                            <constraint firstItem="4CH-IS-KIQ" firstAttribute="centerY" secondItem="Zck-oh-elo" secondAttribute="centerY" id="z2r-o4-Plx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="4CH-IS-KIQ" id="GEe-hh-xKF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAw-KM-kTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="63"/>
+        </scene>
     </scenes>
     <resources>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="eye" catalog="system" width="128" height="81"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

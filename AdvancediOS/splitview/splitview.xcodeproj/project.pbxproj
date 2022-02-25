@@ -7,33 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		714B2E9327C95A2D00B6F227 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B2E9227C95A2D00B6F227 /* DetailViewController.swift */; };
-		714B973027C9450300C95981 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B972F27C9450300C95981 /* ItemView.swift */; };
-		714B973327C9451A00C95981 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 714B973227C9451A00C95981 /* ItemView.xib */; };
-		71BB77A127AEB5410065025F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BB77A027AEB5410065025F /* AppDelegate.swift */; };
-		71BB77A327AEB5410065025F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BB77A227AEB5410065025F /* SceneDelegate.swift */; };
-		71BB77A527AEB5410065025F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BB77A427AEB5410065025F /* ViewController.swift */; };
-		71BB77A827AEB5410065025F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BB77A627AEB5410065025F /* Main.storyboard */; };
-		71BB77AA27AEB5420065025F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BB77A927AEB5420065025F /* Assets.xcassets */; };
-		71BB77AD27AEB5420065025F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BB77AB27AEB5420065025F /* LaunchScreen.storyboard */; };
+		71CC7E1C27C92E4C0012083E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7E1B27C92E4C0012083E /* AppDelegate.swift */; };
+		71CC7E1E27C92E4C0012083E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7E1D27C92E4C0012083E /* SceneDelegate.swift */; };
+		71CC7E2327C92E4C0012083E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CC7E2127C92E4C0012083E /* Main.storyboard */; };
+		71CC7E2527C92E4F0012083E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CC7E2427C92E4F0012083E /* Assets.xcassets */; };
+		71CC7E2827C92E4F0012083E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CC7E2627C92E4F0012083E /* LaunchScreen.storyboard */; };
+		71CC7E3227C92F610012083E /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7E3127C92F610012083E /* MasterTableViewController.swift */; };
+		71CC7E3527C936AB0012083E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7E3427C936AB0012083E /* DetailViewController.swift */; };
+		71CC7E3827C938DA0012083E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7E3727C938DA0012083E /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		714B2E9227C95A2D00B6F227 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		714B972F27C9450300C95981 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
-		714B973227C9451A00C95981 /* ItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
-		71BB779D27AEB5410065025F /* nubankmock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nubankmock.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71BB77A027AEB5410065025F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71BB77A227AEB5410065025F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		71BB77A427AEB5410065025F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		71BB77A727AEB5410065025F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71BB77A927AEB5420065025F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		71BB77AC27AEB5420065025F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		71BB77AE27AEB5420065025F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71CC7E1827C92E4C0012083E /* splitview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CC7E1B27C92E4C0012083E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71CC7E1D27C92E4C0012083E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		71CC7E2227C92E4C0012083E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71CC7E2427C92E4F0012083E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71CC7E2727C92E4F0012083E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71CC7E2927C92E4F0012083E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71CC7E3127C92F610012083E /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		71CC7E3427C936AB0012083E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		71CC7E3727C938DA0012083E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71BB779A27AEB5410065025F /* Frameworks */ = {
+		71CC7E1527C92E4C0012083E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,74 +41,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		71BB779427AEB5410065025F = {
+		71CC7E0F27C92E4C0012083E = {
 			isa = PBXGroup;
 			children = (
-				71BB779F27AEB5410065025F /* nubankmock */,
-				71BB779E27AEB5410065025F /* Products */,
+				71CC7E1A27C92E4C0012083E /* splitview */,
+				71CC7E1927C92E4C0012083E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		71BB779E27AEB5410065025F /* Products */ = {
+		71CC7E1927C92E4C0012083E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71BB779D27AEB5410065025F /* nubankmock.app */,
+				71CC7E1827C92E4C0012083E /* splitview.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71BB779F27AEB5410065025F /* nubankmock */ = {
+		71CC7E1A27C92E4C0012083E /* splitview */ = {
 			isa = PBXGroup;
 			children = (
-				71BB77A027AEB5410065025F /* AppDelegate.swift */,
-				71BB77A227AEB5410065025F /* SceneDelegate.swift */,
-				71BB77A427AEB5410065025F /* ViewController.swift */,
-				71BB77A627AEB5410065025F /* Main.storyboard */,
-				71BB77A927AEB5420065025F /* Assets.xcassets */,
-				71BB77AB27AEB5420065025F /* LaunchScreen.storyboard */,
-				71BB77AE27AEB5420065025F /* Info.plist */,
-				714B972F27C9450300C95981 /* ItemView.swift */,
-				714B973227C9451A00C95981 /* ItemView.xib */,
-				714B2E9227C95A2D00B6F227 /* DetailViewController.swift */,
+				71CC7E1B27C92E4C0012083E /* AppDelegate.swift */,
+				71CC7E1D27C92E4C0012083E /* SceneDelegate.swift */,
+				71CC7E2127C92E4C0012083E /* Main.storyboard */,
+				71CC7E2427C92E4F0012083E /* Assets.xcassets */,
+				71CC7E2627C92E4F0012083E /* LaunchScreen.storyboard */,
+				71CC7E2927C92E4F0012083E /* Info.plist */,
+				71CC7E3127C92F610012083E /* MasterTableViewController.swift */,
+				71CC7E3427C936AB0012083E /* DetailViewController.swift */,
+				71CC7E3727C938DA0012083E /* Item.swift */,
 			);
-			path = nubankmock;
+			path = splitview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71BB779C27AEB5410065025F /* nubankmock */ = {
+		71CC7E1727C92E4C0012083E /* splitview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71BB77B127AEB5420065025F /* Build configuration list for PBXNativeTarget "nubankmock" */;
+			buildConfigurationList = 71CC7E2C27C92E4F0012083E /* Build configuration list for PBXNativeTarget "splitview" */;
 			buildPhases = (
-				71BB779927AEB5410065025F /* Sources */,
-				71BB779A27AEB5410065025F /* Frameworks */,
-				71BB779B27AEB5410065025F /* Resources */,
+				71CC7E1427C92E4C0012083E /* Sources */,
+				71CC7E1527C92E4C0012083E /* Frameworks */,
+				71CC7E1627C92E4C0012083E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = nubankmock;
-			productName = nubankmock;
-			productReference = 71BB779D27AEB5410065025F /* nubankmock.app */;
+			name = splitview;
+			productName = splitview;
+			productReference = 71CC7E1827C92E4C0012083E /* splitview.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		71BB779527AEB5410065025F /* Project object */ = {
+		71CC7E1027C92E4C0012083E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					71BB779C27AEB5410065025F = {
+					71CC7E1727C92E4C0012083E = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 71BB779827AEB5410065025F /* Build configuration list for PBXProject "nubankmock" */;
+			buildConfigurationList = 71CC7E1327C92E4C0012083E /* Build configuration list for PBXProject "splitview" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,58 +115,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 71BB779427AEB5410065025F;
-			productRefGroup = 71BB779E27AEB5410065025F /* Products */;
+			mainGroup = 71CC7E0F27C92E4C0012083E;
+			productRefGroup = 71CC7E1927C92E4C0012083E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71BB779C27AEB5410065025F /* nubankmock */,
+				71CC7E1727C92E4C0012083E /* splitview */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		71BB779B27AEB5410065025F /* Resources */ = {
+		71CC7E1627C92E4C0012083E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71BB77AD27AEB5420065025F /* LaunchScreen.storyboard in Resources */,
-				71BB77AA27AEB5420065025F /* Assets.xcassets in Resources */,
-				71BB77A827AEB5410065025F /* Main.storyboard in Resources */,
-				714B973327C9451A00C95981 /* ItemView.xib in Resources */,
+				71CC7E2827C92E4F0012083E /* LaunchScreen.storyboard in Resources */,
+				71CC7E2527C92E4F0012083E /* Assets.xcassets in Resources */,
+				71CC7E2327C92E4C0012083E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		71BB779927AEB5410065025F /* Sources */ = {
+		71CC7E1427C92E4C0012083E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71BB77A527AEB5410065025F /* ViewController.swift in Sources */,
-				71BB77A127AEB5410065025F /* AppDelegate.swift in Sources */,
-				714B2E9327C95A2D00B6F227 /* DetailViewController.swift in Sources */,
-				71BB77A327AEB5410065025F /* SceneDelegate.swift in Sources */,
-				714B973027C9450300C95981 /* ItemView.swift in Sources */,
+				71CC7E3827C938DA0012083E /* Item.swift in Sources */,
+				71CC7E1C27C92E4C0012083E /* AppDelegate.swift in Sources */,
+				71CC7E3227C92F610012083E /* MasterTableViewController.swift in Sources */,
+				71CC7E1E27C92E4C0012083E /* SceneDelegate.swift in Sources */,
+				71CC7E3527C936AB0012083E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		71BB77A627AEB5410065025F /* Main.storyboard */ = {
+		71CC7E2127C92E4C0012083E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				71BB77A727AEB5410065025F /* Base */,
+				71CC7E2227C92E4C0012083E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		71BB77AB27AEB5420065025F /* LaunchScreen.storyboard */ = {
+		71CC7E2627C92E4F0012083E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				71BB77AC27AEB5420065025F /* Base */,
+				71CC7E2727C92E4F0012083E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -177,7 +173,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		71BB77AF27AEB5420065025F /* Debug */ = {
+		71CC7E2A27C92E4F0012083E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +234,7 @@
 			};
 			name = Debug;
 		};
-		71BB77B027AEB5420065025F /* Release */ = {
+		71CC7E2B27C92E4F0012083E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,38 +289,38 @@
 			};
 			name = Release;
 		};
-		71BB77B227AEB5420065025F /* Debug */ = {
+		71CC7E2D27C92E4F0012083E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFDS75DL2P;
-				INFOPLIST_FILE = nubankmock/Info.plist;
+				INFOPLIST_FILE = splitview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = school.cesar.devapps.2021.1.advancedios.nubankmock;
+				PRODUCT_BUNDLE_IDENTIFIER = school.cesar.devapps.2021.1.advancedios.splitview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		71BB77B327AEB5420065025F /* Release */ = {
+		71CC7E2E27C92E4F0012083E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFDS75DL2P;
-				INFOPLIST_FILE = nubankmock/Info.plist;
+				INFOPLIST_FILE = splitview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = school.cesar.devapps.2021.1.advancedios.nubankmock;
+				PRODUCT_BUNDLE_IDENTIFIER = school.cesar.devapps.2021.1.advancedios.splitview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,25 +330,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71BB779827AEB5410065025F /* Build configuration list for PBXProject "nubankmock" */ = {
+		71CC7E1327C92E4C0012083E /* Build configuration list for PBXProject "splitview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71BB77AF27AEB5420065025F /* Debug */,
-				71BB77B027AEB5420065025F /* Release */,
+				71CC7E2A27C92E4F0012083E /* Debug */,
+				71CC7E2B27C92E4F0012083E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71BB77B127AEB5420065025F /* Build configuration list for PBXNativeTarget "nubankmock" */ = {
+		71CC7E2C27C92E4F0012083E /* Build configuration list for PBXNativeTarget "splitview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71BB77B227AEB5420065025F /* Debug */,
-				71BB77B327AEB5420065025F /* Release */,
+				71CC7E2D27C92E4F0012083E /* Debug */,
+				71CC7E2E27C92E4F0012083E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 71BB779527AEB5410065025F /* Project object */;
+	rootObject = 71CC7E1027C92E4C0012083E /* Project object */;
 }
